@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +33,11 @@ public class ThymeleafController {
         }
         model.addAttribute(userList);
         return "index";
+    }
+
+    @GetMapping(value = "thymeleafTest")
+    @ResponseBody
+    public String thymeleafTest(@RequestParam(defaultValue = "world", required = false) String name) {
+        return name;
     }
 }
