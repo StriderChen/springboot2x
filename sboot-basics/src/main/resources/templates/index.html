@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>springboot-thymeleaf</title>
+</head>
+<body>
+    <h3>使用thymeleaf视图模板,与springboot2整合</h3>
+    <h1>Hello <span th:text="${name}" style="color: #FF4605;"></span> !</h1>
+    <table border="1">
+        <tr>
+            <th>用户ID</th>
+            <th>用户名</th>
+            <th>年龄</th>
+        </tr>
+        <tr  th:each="user : ${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>
