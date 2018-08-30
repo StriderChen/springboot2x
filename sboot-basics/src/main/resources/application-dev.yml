@@ -12,3 +12,11 @@ spring:
     # 配置视图模板后缀
     suffix: .html
 
+# 自定义属性
+person:
+  name: chenjie
+  age: 26
+  gender: 男
+  # 属性之间相互调用
+  content: "姓名:${person.name},年龄:${person.age},性别:${person.gender}"
+

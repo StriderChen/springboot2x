@@ -1,25 +1,22 @@
 package com.chenjie.springboot2x.sbootbasics.controller;
 
+import com.chenjie.springboot2x.sbootbasics.vo.PersonProperties;
 import com.sun.glass.ui.Application;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
-
 /**
  * @Author chenjie
- * @Date 2018/8/28 10:49
- * @Description: 单元测试类
+ * @Date 2018/8/28 21:57
+ * @Description:
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class ThymeleafControllerTest {
+@Slf4j
+public class ConfigurationControllerTest {
 
-    @Test
-    public void testThymeleaf() {
-        ThymeleafController controller = new ThymeleafController();
-        assertEquals("chenjie",controller.thymeleafTest("chenjie"));
-    }
 }
