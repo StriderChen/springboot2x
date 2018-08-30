@@ -11,6 +11,10 @@ spring:
     prefix: classpath:/templates/
     # 配置视图模板后缀
     suffix: .html
+  devtools:
+    restart:
+      exclude: application.yml,application-dev.yml
+
 
 # 自定义属性
 person:

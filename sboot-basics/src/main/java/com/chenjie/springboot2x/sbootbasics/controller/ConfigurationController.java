@@ -47,9 +47,9 @@ public class ConfigurationController {
         log.warn("map value::",map);
 
         User user = new User();
-        user.setAge(18);
-        user.setId(001);
-        user.setName("陈杰");
+        user.setAge(26);
+        user.setId(0011);
+        user.setName("陈杰1");
         System.out.println(user);
         log.info("user::",user);
         return map;
