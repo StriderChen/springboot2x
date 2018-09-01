@@ -1,0 +1,16 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /sboot-data
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springbootstudy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  #添加jpa配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
