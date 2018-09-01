@@ -13,6 +13,7 @@ import java.util.List;
  * @Description: 用jpa实现对数据库的增删改查操作
  */
 @RestController
+@RequestMapping(value = "girls")
 public class GirlController {
 
     @Autowired
@@ -22,7 +23,7 @@ public class GirlController {
      * get请求
      * @return
      */
-    @GetMapping(value = "girls")
+    @GetMapping(value = "")
     public List<Girl> findGirls() {
         List<Girl> girls = girlService.findGirls();
         return girls;
@@ -33,7 +34,7 @@ public class GirlController {
      * get请求
      * @return
      */
-    @GetMapping(value = "girls/{id}")
+    @GetMapping(value = "{id}")
     public Girl findGirlById(@PathVariable(value = "id") Integer id) {
         Girl girl = girlService.findAGirl(id);
         return girl;
@@ -44,7 +45,7 @@ public class GirlController {
      * post请求
      * @return
      */
-    @PostMapping(value = "girls")
+    @PostMapping(value = "")
     public Girl addGirl(@RequestParam(value = "name") String name,
                         @RequestParam(value = "age") Integer age,
                         @RequestParam(value = "cupSize") String cupSize) {
@@ -61,7 +62,7 @@ public class GirlController {
      * 更新一个女生,用put提交
      * @return
      */
-    @PutMapping(value = "girls/{id}")
+    @PutMapping(value = "{id}")
     public Girl updateGirl(@PathVariable("id")Integer id,
                            @RequestParam(value = "name") String name,
                            @RequestParam(value = "age") Integer age,
@@ -80,7 +81,7 @@ public class GirlController {
      * 删除一个女生,用delete提交
      * 根据id
      */
-    @DeleteMapping(value = "girls/{id}")
+    @DeleteMapping(value = "{id}")
     public void deleteAGirl(@PathVariable(value = "id") Integer id) {
         girlService.deleteAGirl(id);
     }
