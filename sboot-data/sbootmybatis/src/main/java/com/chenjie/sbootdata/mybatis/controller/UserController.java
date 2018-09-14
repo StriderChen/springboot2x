@@ -27,11 +27,17 @@ public class UserController {
      * @param phone
      * @return
      */
-    @PostMapping(value = "/")
+   /* @PostMapping(value = "/")
     public Integer addUser(@RequestParam("userName") String userName,
                            @RequestParam("password") String password,
                            @RequestParam("phone") String phone) {
         User user = new User(userName,password,phone);
+        Integer i = userService.addUser(user);
+        return i;
+    }*/
+    @PostMapping(value = "/")
+    public Integer addUser(User user) {
+        //User user = new User(userName,password,phone);
         Integer i = userService.addUser(user);
         return i;
     }
@@ -87,12 +93,26 @@ public class UserController {
         return deletedId;
     }
 
-    @PutMapping(value = "/{id}")
+    /**
+     * 根据id修改用户
+     * @param id
+     * @param userName
+     * @param password
+     * @param phone
+     * @return
+     */
+   /* @PutMapping(value = "/{id}")
     public Integer updateUserById(@PathVariable(value = "id") Integer id,
                                   @RequestParam(value = "userName") String userName,
                                   @RequestParam(value = "password") String password,
                                   @RequestParam(value = "phone") String phone) {
         User user = new User(id,userName,password,phone);
+        Integer userId = userService.updateUserById(user);
+        return userId;
+    } */
+    @PutMapping(value = "/{id}")
+    public Integer updateUserById(@PathVariable(value = "id") Integer id,User user) {
+        user.setUserId(id);
         Integer userId = userService.updateUserById(user);
         return userId;
     }

@@ -1,14 +1,16 @@
 server:
   servlet:
     context-path: /sbootdata
-  port: 8088
+  port: 8090
 
 spring:
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springbootstudy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
     username: root
     password: root
-  #添加jpa配置
-  jpa:
-    show-sql: true
 
+#mybatis相关配置
+mybatis:
+  type-aliases-package: com.chenjie.sbootdata.mybatis.entity
+  mapper-locations: classpath:mapper/*.xml
