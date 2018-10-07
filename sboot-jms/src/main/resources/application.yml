@@ -1,0 +1,15 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /sbootjms
+spring:
+  mail:
+    host: smtp.126.com
+    username: chj2934@126.com
+    password: chenjie525352
+    protocol: smtp
+    default-encoding: utf-8
+
+jms-mail:
+  from: chj2934@126.com
+  to: 729217667@qq.com
