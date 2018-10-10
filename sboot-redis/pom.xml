@@ -6,7 +6,10 @@
     <groupId>com.chenjie</groupId>
     <artifactId>sboot-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>message</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>sboot-redis</name>
     <description>springboot整合Redis</description>
