@@ -1,0 +1,11 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /es
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+      cluster-name: chenjie
+      repositories:
+        enabled: true
