@@ -25,7 +25,8 @@ public class SchedulerConfig {
                 .build();
 
         //cron表达式 表示每隔i秒执行
-        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(String.format("0/%d * * * * ? ", CRON))
+        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder
+                .cronSchedule(String.format("0/%d * * * * ? ", CRON))
                 .withMisfireHandlingInstructionDoNothing();
 
         CronTrigger cronTrigger = TriggerBuilder.newTrigger()
